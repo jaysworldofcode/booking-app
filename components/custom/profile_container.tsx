@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { cn } from "@/lib/utils"
 import {
   Bell,
   CircleUser,
@@ -26,8 +27,10 @@ import { UserButton } from "@clerk/nextjs"
 
 export default function ProfileContainer({
   children,
+  page_name
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
+  page_name: string
 }) {
   return (
     <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
@@ -45,44 +48,18 @@ export default function ProfileContainer({
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary hover:bg-muted"
-              >
-                <Home className="h-4 w-4" />
-                Dashboard
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary hover:bg-muted"
-              >
-                <ShoppingCart className="h-4 w-4" />
-                Orders
-                <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                  6
-                </Badge>
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-primary transition-all hover:text-primary hover:bg-muted"
-              >
-                <Package className="h-4 w-4" />
-                Products
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary hover:bg-muted"
-              >
-                <Users className="h-4 w-4" />
-                Customers
-              </Link>
-              <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary hover:bg-muted"
-              >
-                <LineChart className="h-4 w-4" />
-                Analytics
-              </Link>
+              {
+                nav_item.map((x, i) =>
+                  <Link
+                    href={x.url}
+                    className={cn("flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary hover:bg-muted")}
+                  >
+                    { x.icon }
+                    { x.title }
+                    { x.badge? <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">{ x.badge }</Badge>: null }
+                  </Link>
+                )
+              }
             </nav>
           </div>
           <div className="mt-auto p-4">
@@ -118,51 +95,18 @@ export default function ProfileContainer({
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
               <nav className="grid gap-2 text-lg font-medium">
-                <Link
-                  href="#"
-                  className="flex items-center gap-2 text-lg font-semibold"
-                >
-                  <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Acme Inc</span>
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Home className="h-5 w-5" />
-                  Dashboard
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
-                >
-                  <ShoppingCart className="h-5 w-5" />
-                  Orders
-                  <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                    6
-                  </Badge>
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Package className="h-5 w-5" />
-                  Products
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <Users className="h-5 w-5" />
-                  Customers
-                </Link>
-                <Link
-                  href="#"
-                  className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-                >
-                  <LineChart className="h-5 w-5" />
-                  Analytics
-                </Link>
+                {
+                  nav_item.map((x, i) =>
+                    <Link
+                      href={x.url}
+                      className={cn("mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground")}
+                    >
+                      { x.icon }
+                      { x.title }
+                      { x.badge? <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">{ x.badge }</Badge>: null }
+                    </Link>
+                  )
+                }
               </nav>
               <div className="mt-auto">
                 <Card>
@@ -203,3 +147,34 @@ export default function ProfileContainer({
     </div>
   )
 }
+
+const nav_item= [
+  {
+    title: 'Dashboard',
+    icon: <Home className="h-4 w-4" />,
+    url: '/dashboard',
+  },
+  {
+    title: 'Orders',
+    icon: <ShoppingCart className="h-4 w-4" />,
+    badge: 6,
+    url: '/dashboard',
+  },
+  {
+    title: 'Products',
+    icon: <Package className="h-4 w-4" />,
+    badge: 6,
+    url: '/products',
+  },
+  {
+    title: 'Customers',
+    icon: <Users className="h-5 w-5" />,
+    badge: 6,
+    url: '/customers',
+  },
+  {
+    title: 'Analytics',
+    icon: <LineChart className="h-5 w-5" />,
+    url: '/analytics',
+  }
+]

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 export default function Products() {
   return (
     <div>
-        <ProfileContainer>
+        <ProfileContainer page_name={'products'}>
             <div className="flex items-center">
                 <h1 className="text-lg font-semibold md:text-2xl">Inventory</h1>
             </div>
