@@ -3,14 +3,12 @@ import Link from "next/link"
 import {
     File,
     ListFilter,
-    MoreHorizontal,
     PlusCircle,
   } from "lucide-react"
   import { Button } from "@/components/ui/button"
   import {
     Card,
     CardContent,
-    CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
@@ -19,7 +17,6 @@ import {
     DropdownMenu,
     DropdownMenuCheckboxItem,
     DropdownMenuContent,
-    DropdownMenuItem,
     DropdownMenuLabel,
     DropdownMenuSeparator,
     DropdownMenuTrigger,
@@ -27,7 +24,6 @@ import {
 import {
     Table,
     TableBody,
-    TableCell,
     TableHead,
     TableHeader,
     TableRow,

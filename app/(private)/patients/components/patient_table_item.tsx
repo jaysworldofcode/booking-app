@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import capitalizeString from "@/app/utils/capitalize_string"
 import { deletePatient } from "@/app/server/actions/patients"
+import Link from "next/link"
 
 type Prop = {
     id: string,
@@ -89,7 +90,11 @@ return (
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                <DropdownMenuItem>Edit</DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                    <Link href={'/patients/'+id}>
+                        Edit
+                    </Link>
+                </DropdownMenuItem>
                 <DropdownMenuItem onClick={onDelete}>Delete</DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>

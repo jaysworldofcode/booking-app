@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/popover"
 import { CalendarIcon } from "@radix-ui/react-icons"
 import { format } from "date-fns"
-import { createPatient } from "@/app/server/actions/patients"
+import { createPatient, updatePatient } from "@/app/server/actions/patients"
 import { cn } from "@/lib/utils"
 import { Calendar } from "@/components/ui/calendar"
 import {
@@ -36,23 +36,40 @@ import {
     SelectValue,
 } from "@/components/ui/select"
   
-export default function PatientForm() {
-    const [date, setDate] = React.useState<Date>()
+export default function PatientForm({
+    patient
+}:{
+    patient?: {
+        id: string;
+        firstname: string;
+        lastname: string;
+        email: string | null;
+        contact_number: string | null;
+        birthdate: string | null;
+        gender: string | null;
+        clerkUserId: string | null;
+        createdAt: Date;
+        updatedAt: Date;
+    }
+}) {
+    const [date, setDate] = React.useState<Date>(patient?.birthdate ? new Date(patient.birthdate) : new Date())
 
     const form = useForm<z.infer<typeof patientFormSchema>>({
         resolver: zodResolver(patientFormSchema),
         defaultValues: {
-            firstname: '',
-            lastname: '',
-            email: '',
-            contact_number: '',
-            birthdate: '',
-            gender: 'm'
+            firstname: patient?.firstname ?? '',
+            lastname: patient?.lastname ?? '',
+            email: patient?.email ?? '',
+            contact_number: patient?.contact_number ?? '',
+            birthdate: patient?.birthdate ?? '',
+            gender: patient?.gender ?? ''
         },
     })
+
     async function onSubmit(values: z.infer<typeof patientFormSchema>) {
-        const data = await createPatient(values)
-    
+        const action = patient == null ? createPatient : updatePatient.bind(null, patient.id)
+        const data = await action(values)
+      
         if (data?.error) {
           form.setError("root", {
             message: "There was an error saving your event",
