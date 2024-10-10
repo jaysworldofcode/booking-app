@@ -155,7 +155,7 @@ const nav_item= [
     url: '/dashboard',
   },
   {
-    title: 'Orders',
+    title: 'Appointments',
     icon: <ShoppingCart className="h-4 w-4" />,
     badge: 6,
     url: '/dashboard',
@@ -167,14 +167,19 @@ const nav_item= [
     url: '/products',
   },
   {
-    title: 'Customers',
+    title: 'Patients',
     icon: <Users className="h-5 w-5" />,
     badge: 6,
-    url: '/customers',
+    url: '/patients',
   },
   {
     title: 'Analytics',
     icon: <LineChart className="h-5 w-5" />,
-    url: '/analytics',
-  }
+    url: '/dashboard',
+  },
+  {
+    title: 'Settings',
+    icon: <LineChart className="h-5 w-5" />,
+    url: '/settings',
+  },
 ]
