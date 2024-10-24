@@ -6,9 +6,8 @@ CREATE TABLE IF NOT EXISTS "patients" (
 	"contact_number" text,
 	"birthdate" text,
 	"gender" text,
+	"active" boolean DEFAULT true NOT NULL,
 	"clerkUserId" text,
 	"createdAt" timestamp DEFAULT now() NOT NULL,
 	"updatedAt" timestamp DEFAULT now() NOT NULL
 );
---> statement-breakpoint
-CREATE INDEX IF NOT EXISTS "patientIdIndex" ON "patients" USING btree ("id");

@@ -1,5 +1,5 @@
 {
-  "id": "61a27580-7b5f-4bcd-b393-2c027f78de22",
+  "id": "b516baef-39bf-4fa7-ade7-6e30e72b0a3d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -51,6 +51,13 @@
           "primaryKey": false,
           "notNull": false
         },
+        "active": {
+          "name": "active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
         "clerkUserId": {
           "name": "clerkUserId",
           "type": "text",
@@ -72,23 +79,7 @@
           "default": "now()"
         }
       },
-      "indexes": {
-        "patientIdIndex": {
-          "name": "patientIdIndex",
-          "columns": [
-            {
-              "expression": "id",
-              "isExpression": false,
-              "asc": true,
-              "nulls": "last"
-            }
-          ],
-          "isUnique": false,
-          "concurrently": false,
-          "method": "btree",
-          "with": {}
-        }
-      },
+      "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}

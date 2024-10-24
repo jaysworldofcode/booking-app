@@ -155,7 +155,7 @@ return (
                                 <SelectGroup>
                                 <SelectLabel>Gender</SelectLabel>
                                 <SelectItem value="m">Male</SelectItem>
-                                <SelectItem value="f">female</SelectItem>
+                                <SelectItem value="f">Female</SelectItem>
                                 </SelectGroup>
                             </SelectContent>
                             </Select>

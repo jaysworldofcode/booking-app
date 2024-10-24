@@ -30,7 +30,6 @@ export default async function UpdatePatient({
     const patient = await db.query.PatientTable.findFirst({
       where: eq(PatientTable.id, patientId)
     })
-    console.log(patient)
   
     if (patient == null) return notFound()
 

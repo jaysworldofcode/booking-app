@@ -80,7 +80,7 @@ export async function PatientsList(){
             <TabsTrigger value="active">Active</TabsTrigger>
             <TabsTrigger value="draft">Draft</TabsTrigger>
             <TabsTrigger value="archived" className="hidden sm:flex">
-            Archived
+                Archived
             </TabsTrigger>
         </TabsList>
         <div className="ml-auto flex items-center gap-2">

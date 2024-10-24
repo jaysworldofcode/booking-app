@@ -158,7 +158,7 @@ const nav_item= [
     title: 'Appointments',
     icon: <ShoppingCart className="h-4 w-4" />,
     badge: 6,
-    url: '/dashboard',
+    url: '/appointments',
   },
   {
     title: 'Products',

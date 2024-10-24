@@ -31,7 +31,7 @@ export default function OurServices() {
                         <div className="sm:mr-4">
                             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-green-50">
                                 <svg className="w-12 h-12 text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                    <polygon strokeWidth="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                 </svg>
                             </div>
@@ -45,7 +45,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                                 points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -54,7 +54,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                                 points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -63,7 +63,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                                 points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -80,7 +80,7 @@ export default function OurServices() {
                         <div className="sm:mr-4">
                             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-green-50">
                                 <svg className="w-12 h-12 text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                    <polygon strokeWidth="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                 </svg>
                             </div>
@@ -95,7 +95,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -104,7 +104,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -113,7 +113,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -130,7 +130,7 @@ export default function OurServices() {
                         <div className="sm:mr-4">
                             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-green-50">
                                 <svg className="w-12 h-12 text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                                    <polygon strokeWidth="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
                                         points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                 </svg>
                             </div>
@@ -144,7 +144,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -153,7 +153,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
@@ -162,7 +162,7 @@ export default function OurServices() {
                                 <li className="flex items-start">
                                     <span className="mr-1">
                                         <svg className="w-5 h-5 mt-px text-green-400" stroke="currentColor" viewBox="0 0 52 52">
-                                            <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                                            <polygon strokeWidth="4" stroke-linecap="round" stroke-linejoin="round"
                                                 fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
                                         </svg>
                                     </span>
